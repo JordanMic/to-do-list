@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(bgc.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Todo {
+    width: 800px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+    text-align: center;
+    opacity: 0;
+    animation: moveH 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px 10px 10px 20px;
+    align-items: center;
+    margin: 15px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 5px;
+}
+
+.header {
+    padding: 40px;
+    background-color: rgb(26, 139, 54);
+    border-radius: 5px 5px 0 0;
+
+}
+
+li button {
+    background-color: #fff;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.options {
+    display: inline-block;
+}
+
+.check:hover {
+    background-color: limegreen;
+    color: white;
+}
+
+.edit:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.list h2 {
+    color: black;
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(105, 105, 105)
+}
+
+.btnAdd {
+    padding: 10px 35px;
+    background-color: white;
+    border-style: none;
+    border-radius: 15px;
+    color: rgb(105, 105, 105);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btnAdd:hover {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    transform: scale(1.1);
+}
+
+.popupEdit {
+    display: none;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(75, 75, 75);
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+    text-align: center;
+    color: white;
+    padding: 40px;
+    z-index: 2;
+    animation-duration: 0.3s;
+}
+
+.popupAdd {
+    display: none;
+}
+
+.popup input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    border-style: none;
+    margin-bottom: 15px;
+}
+
+.popup button {
+    padding: 10px 20px;
+    font-size: 12px;
+    margin: 30px 10px 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    border-style: none;
+}
+
+.btnPopupAdd:hover {
+    background-color: limegreen;
+}
+
+.btnPopupCancel:hover {
+    background-color: goldenrod;
+}
+
+.btnPopupEAdd:hover {
+    background-color: limegreen;
+}
+
+.btnPopupECancel:hover {
+    background-color: goldenrod;
+}
+
+.btnPopupEDelete:hover {
+    background-color: tomato;
+}
+
+
+.container {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    display: none;
+}
+
+.container.active {
+    filter: blur(20px);
+    background-color: black;
+    animation: moveB 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.animate {
+    animation: moveH .5s;
+}
+
+.completed {
+    text-decoration: line-through;
+    background-color: limegreen;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    bottom: 5px;
+    color: white;
+    padding: 10px;
+}
+
+@keyframes moveH {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveB {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}

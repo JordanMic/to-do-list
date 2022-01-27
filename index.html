@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List - Jordan Michalak</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/4b9d3e599a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="Todo">
+        <div class="header">
+            <h2>TODO LISTA</h2>
+            <button class="btnAdd">Dodaj zadanie</button>
+        </div>
+        <div class="list">
+            <h2 class="listH2">Brak zadań na liście</h2>
+            <ul></ul>
+        </div>
+    </div>
+
+    <div class="container"></div>
+    <div class="popup popupAdd">
+        <h2>Dodaj Zadanie</h2>
+        <input type="text" class="dataIn" placeholder="Wprowadź treść swojego zadania">
+        <p class="result"></p>
+        <button class="btnPopupAdd">Zapisz</button>
+        <button class="btnPopupCancel">Anuluj</button>
+    </div>
+    
+    <dib class="popup popupEdit">
+        <h2>Edytuj swoje zadanie</h2>
+        <input type="text" class="popInput">
+        <p class="result"></p>
+        <button class="btnPopupEAdd">Zapisz</button>
+        <button class="btnPopupEDelete">Usuń</button>
+        <button class="btnPopupECancel">Anuluj</button>
+    </dib>
+    
+    <footer>Jordan Michalak 2021 &copy Wszystkie prawa zastrzeżone</footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>
